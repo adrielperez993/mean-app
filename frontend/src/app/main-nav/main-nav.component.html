@@ -9,6 +9,10 @@
     <mat-toolbar color="primary">
     </mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item><mat-icon matListIcon>sort</mat-icon> All Tasks</a>
+      <a mat-list-item><mat-icon matListIcon>chat</mat-icon> All Threads</a>
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>SOME LINKS</h3>
       <a mat-list-item href="#">Link 1</a>
       <a mat-list-item href="#">Link 2</a>
       <a mat-list-item href="#">Link 3</a>
@@ -24,7 +28,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>AppName</span>
+      <!-- <span>AppName</span> -->
+      <a><img src="../../assets/images/uwi.svg"></a>
       <span class="spacer"></span>
       <a mat-button href="#">Link 1</a>
       <a mat-button href="#">Link 2</a>

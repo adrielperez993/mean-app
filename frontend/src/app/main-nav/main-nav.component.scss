@@ -3,7 +3,11 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 250px;
+}
+
+.sidenav a {
+  color: black;
 }
 
 .mat-toolbar.mat-primary {
@@ -20,4 +24,13 @@ mat-toolbar a {
   margin: 0 10px;
   color: white;
   text-decoration: none;
+}
+
+mat-toolbar img {
+  width: 90px;
+  height: 60px;
+}
+
+mat-toolbar button {
+  color: white;
 }

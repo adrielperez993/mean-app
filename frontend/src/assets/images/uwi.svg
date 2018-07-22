@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181 121">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b49000;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-size: 90px;
+        font-family: ArialRoundedMTBold, Arial Rounded MT;
+      }
+
+      .cls-2 {
+        fill: #b400a2;
+      }
+
+      .cls-3 {
+        fill: #00b4a2;
+      }
+    </style>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-46 -181)">
+    <text id="UWI" class="cls-1" transform="translate(46 266)"><tspan x="0" y="0">UWI</tspan></text>
+    <text id="UWI-2" data-name="UWI" class="cls-2" transform="translate(46 275)"><tspan x="0" y="0">UWI</tspan></text>
+    <text id="UWI-3" data-name="UWI" class="cls-3" transform="translate(46 283)"><tspan x="0" y="0">UWI</tspan></text>
+  </g>
+</svg>

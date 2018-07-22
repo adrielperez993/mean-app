@@ -7,6 +7,7 @@ employeeController.getEmployees = async (req, res) => {
 };
 
 employeeController.addEmployee = async (req, res) => {
+    console.log(req.body);
     const employee = new Employee(req.body);
     await employee.save();
     res.json({Status: "Employee Saved"});

@@ -1,27 +1,35 @@
 <div class="container">
-  <mat-card>
-
-      <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <div class="row">
+    <mat-card>
+      <mat-card-header><mat-icon>person</mat-icon>Add Employee</mat-card-header>
+      <form class="example-form" #employeeForm="ngForm" (submit)="addEmployee(employeeForm)">
         <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" name="Name" #Name="ngModel" [(ngModel)]="employeeService.selectedEmployee.Name" placeholder="Enter your Name">
+            <!-- <button mat-button *ngIf="name" matSuffix mat-icon-button aria-label="Clear" (click)="name=''">
+              <mat-icon>close</mat-icon>
+            </button> -->
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" name="Position" #Position="ngModel" [(ngModel)]="employeeService.selectedEmployee.Position" placeholder="Enter your Position">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" name="Office" #Office="ngModel" [(ngModel)]="employeeService.selectedEmployee.Office" placeholder="Enter your Office">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" name="Salary" #Salary="ngModel" [(ngModel)]="employeeService.selectedEmployee.Salary" placeholder="Enter your Salary">
+          </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button color="accent">LIKE</button>
-          <button mat-button color="accent">SHARE</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!employeeForm.form.valid">ADD</button>
+          <button mat-button (click)="resetForm(employeeForm)">CLEAR</button>
         </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+</div>
 
-        <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
-          
-        </form>
 
-  </mat-card>
+<div>
+  <p>Angular Generated Form: {{employeeForm.value | json}}</p>
 </div>

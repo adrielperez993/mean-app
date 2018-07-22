@@ -1,6 +1,7 @@
 const express = require('express');
 // morgan: usa para ver lo que el usuario pide, por la consola
 const morgan = require('morgan');
+const cors = require('cors');
 const app = express();
 
 const { mongoose } = require('./database');
@@ -13,7 +14,7 @@ app.set('port', process.env.PORT || 3000);
 // ==========  Middleware  ==========
 app.use(morgan('dev'));
 app.use(express.json());
-
+app.use(cors({origin: 'http://localhost:4200'}))
 
 
 
