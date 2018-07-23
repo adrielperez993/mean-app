@@ -50,6 +50,8 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+
+// Services
 import { EmployeeService } from './services/employee.service';
 
 @NgModule({
@@ -101,7 +103,9 @@ import { EmployeeService } from './services/employee.service';
     MatTooltipModule,
     MatTreeModule,
   ],
-  providers: [],
+  providers: [
+    EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
